@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+execute:
+  freeze: false
+
+website:
+  title: "Belle the Cat"
+  #site-url: mhanf.github.io/quarto_website/
+  description: Personal website
+  #repo-url: https://github.com/mhanf/quarto_website
+  #repo-actions: issue
+  #favicon: image/favicon.png
+  image: image/logo.png
+  open-graph: 
+    image: image/logo.png
+    image-alt: |
+      A square logo made from Matthieu Hanf's name - 
+      Prompt symbol following of first name and last name first letters as well a vertical line in black capital letters, 
+      on a white background
+    image-width: 500
+    image-height: 500
+  navbar:
+    title: "Belle <span class='blink'>|</span>"
+    left:
+      - href: index.qmd
+        text: Home
+      #- href: about.qmd
+      #  text: About
+      #- href: research.qmd
+      #  text: Research
+      #- href: software.qmd
+      #  text: Project
+      #- href: ressources.qmd
+      #  icon: lightbulb
+      #  text: " "
+    right:
+      - icon: github
+        #href: https://github.com/mhanf
+
+format:
+  html:
+    theme:
+      light: theme/light_theme.scss
+      dark: theme/dark_theme.scss
+    smooth-scroll: true
+    link-external-newwindow: true
+
+

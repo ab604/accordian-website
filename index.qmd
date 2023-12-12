@@ -1,0 +1,131 @@
+```{r}
+#| echo: false
+#| warning: false
+library(htmltools)
+source("R/tag_functions.R")
+
+
+body_hello <- tagList(
+  p(
+    class="m-1",
+    "Hi, my name is ",
+    tags$strong("Belle Cat")
+    ),
+  p(
+    class="m-1",
+    "> I'm passionnate about ",
+    tags$strong("sleeping.")
+    ),
+  p(
+    class="m-1",
+    "> I like to sleep for up to 19 hours a day.",
+    #tags$strong("make insights for health professionals & patients.")
+    ),
+  p(
+    class="m-1",
+    "> I live in Southampton ",
+    tags$strong("with Carl.")
+    )#,
+  #br(),
+  #p(
+  #  class="m-1",
+  #  "For more :"
+  #),
+  # p(
+  #   class="m-1",
+  #   "> ",
+  #   tags$a(class = "fw-bold", "About", href = "about.qmd"),
+  #   "> ",
+  #   tags$a(class = "fw-bold", "Research", href = "research.qmd"),
+  #   "> ",
+  #   tags$a(class = "fw-bold", "Project", href = "software.qmd")
+  #   )
+)
+
+body_contact <- tagList(
+  p(
+    class="m-1",
+    "I will be",
+    tags$strong("glad to hear from you.")
+  ),
+  p(
+    class="m-1",
+    "> You can find me elsewhere."
+  ),
+  div(class="text-center",
+      htmltools::tags$a(
+        class="btn bg-white text-primary", 
+        href="https://github.com/mhanf",
+        target="_blank",
+        rel="noopener noreferrer",
+        fontawesome::fa("github")
+      ),
+      htmltools::tags$a(
+        class="btn bg-white text-primary", 
+        href="https://www.linkedin.com/in/matthieu-hanf-a03377104/",
+        target="_blank",
+        rel="noopener noreferrer",
+        fontawesome::fa("linkedin")
+      ),
+      htmltools::tags$a(
+        class="btn bg-white text-primary", 
+        href="https://orcid.org/0000-0001-7133-1323",
+        target="_blank",
+        rel="noopener noreferrer",
+        fontawesome::fa("orcid")
+      ),
+      htmltools::tags$a(
+        class="btn bg-white text-primary", 
+        href="mailto:matthieu.hanf@gmail.com",
+        target="_blank",
+        rel="noopener noreferrer",
+        fontawesome::fa("envelope")
+      )
+  )
+)
+
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+    type="text/javascript",
+    src = "assets/fire_click.js"
+  ),
+  # grid placement
+  div(
+    class="grid",
+    # hello
+    div(
+      class = "g-col-12 g-col-md-8 align-self-center g-start-1",
+      accordeon_code(
+        title = "> HELLO WORLD !",
+        body = body_hello,
+        id = "hello")
+      ),
+    # picture
+    div(
+      class = "g-col-12 g-col-md-4 align-self-center g-start-1 g-start-md-9",
+      accordeon_code(
+        title = "> PICTURE",
+        body = img(
+          src = "image/belle-drawing.jpg",
+          class="img-fluid rounded"
+        ),
+        id = "photo"
+      )
+    ),
+    # contact
+    div(
+      class = "g-col-12  g-col-md-8 justify-content-left g-start-1 g-start-md-2",
+      accordeon_code(
+        title = "> CONTACT",
+        body = body_contact,
+        id = "contact"
+      )
+    )
+  ),
+  # footer
+  footer_code()
+)
+```
