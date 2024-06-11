@@ -6,7 +6,7 @@ execute:
   freeze: false
 
 website:
-  title: "Belle the Cat"
+  title: "University Library"
   #site-url: mhanf.github.io/quarto_website/
   description: Personal website
   #repo-url: https://github.com/mhanf/quarto_website
@@ -16,13 +16,11 @@ website:
   open-graph: 
     image: image/logo.png
     image-alt: |
-      A square logo made from Matthieu Hanf's name - 
-      Prompt symbol following of first name and last name first letters as well a vertical line in black capital letters, 
-      on a white background
+      Some alt-text
     image-width: 500
     image-height: 500
   navbar:
-    title: "Belle <span class='blink'>|</span>"
+    title: "University Library <span class='blink'>|</span>"
     left:
       - href: index.qmd
         text: Home

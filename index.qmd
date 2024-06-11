@@ -8,24 +8,28 @@ source("R/tag_functions.R")
 body_hello <- tagList(
   p(
     class="m-1",
-    "Hi, my name is ",
-    tags$strong("Belle Cat")
+    "The library collection includes over 1 million items, including books, journals, databases, and digital resources. The library also offers a range of services to support students, faculty, and staff, including research assistance, inter-library loan services, and course reserves. Additionally, the library provides study spaces, group study rooms, and collaborative workspaces to support student learning and academic success."
     ),
-  p(
+p(
     class="m-1",
-    "> I'm passionnate about ",
-    tags$strong("sleeping.")
+    "The Library is open 7 days a week from 0800 to 2200."
     ),
-  p(
-    class="m-1",
-    "> I like to sleep for up to 19 hours a day.",
-    #tags$strong("make insights for health professionals & patients.")
-    ),
-  p(
-    class="m-1",
-    "> I live in Southampton ",
-    tags$strong("with Carl.")
-    )#,
+#   p(
+#     class="m-1",
+#     "> Business"
+#     ),
+#   p(
+#     class="m-1",
+#     "> Engineering and Physical Sciences"
+#     ),
+# p(
+#     class="m-1",
+#     "> Environmental and Life Sciences"
+#     ),
+# p(
+#     class="m-1",
+#     "> Medicine"
+#     ),
   #br(),
   #p(
   #  class="m-1",
@@ -45,38 +49,38 @@ body_hello <- tagList(
 body_contact <- tagList(
   p(
     class="m-1",
-    "I will be",
+    "We will be",
     tags$strong("glad to hear from you.")
   ),
-  p(
-    class="m-1",
-    "> You can find me elsewhere."
-  ),
+  # p(
+  #   class="m-1",
+  #   "> You can find me elsewhere."
+  # ),
   div(class="text-center",
       htmltools::tags$a(
         class="btn bg-white text-primary", 
-        href="https://github.com/mhanf",
+        href="",
         target="_blank",
         rel="noopener noreferrer",
         fontawesome::fa("github")
       ),
       htmltools::tags$a(
         class="btn bg-white text-primary", 
-        href="https://www.linkedin.com/in/matthieu-hanf-a03377104/",
+        href="",
         target="_blank",
         rel="noopener noreferrer",
         fontawesome::fa("linkedin")
       ),
       htmltools::tags$a(
         class="btn bg-white text-primary", 
-        href="https://orcid.org/0000-0001-7133-1323",
+        href="",
         target="_blank",
         rel="noopener noreferrer",
         fontawesome::fa("orcid")
       ),
       htmltools::tags$a(
         class="btn bg-white text-primary", 
-        href="mailto:matthieu.hanf@gmail.com",
+        href="",
         target="_blank",
         rel="noopener noreferrer",
         fontawesome::fa("envelope")
@@ -99,7 +103,7 @@ tagList(
     div(
       class = "g-col-12 g-col-md-8 align-self-center g-start-1",
       accordeon_code(
-        title = "> HELLO WORLD !",
+        title = "Welcome to the Library",
         body = body_hello,
         id = "hello")
       ),
@@ -107,9 +111,9 @@ tagList(
     div(
       class = "g-col-12 g-col-md-4 align-self-center g-start-1 g-start-md-9",
       accordeon_code(
-        title = "> PICTURE",
+        title = "Map",
         body = img(
-          src = "image/belle-drawing.jpg",
+          src = "image/highfield-map.png",
           class="img-fluid rounded"
         ),
         id = "photo"
@@ -119,7 +123,7 @@ tagList(
     div(
       class = "g-col-12  g-col-md-8 justify-content-left g-start-1 g-start-md-2",
       accordeon_code(
-        title = "> CONTACT",
+        title = "Contact",
         body = body_contact,
         id = "contact"
       )
